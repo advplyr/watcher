@@ -1,10 +1,10 @@
 
 /* IMPORT */
 
-import {FSWatcher} from 'fs';
-import {Stats} from 'ripstat';
-import {ResultDirectories} from 'tiny-readdir/dist/types';
-import {FSTargetEvent, TargetEvent} from './enums';
+import { FSWatcher } from 'fs';
+import { Stats } from 'ripstat';
+import { ResultDirectories } from 'advplyr-tiny-readdir/dist/types';
+import { FSTargetEvent, TargetEvent } from './enums';
 import WatcherStats from './watcher_stats';
 
 /* TYPES */
@@ -15,11 +15,11 @@ type Disposer = () => void;
 
 type Event = [TargetEvent, Path, Path?];
 
-type FSHandler = ( event?: FSTargetEvent, targetName?: string ) => void;
+type FSHandler = (event?: FSTargetEvent, targetName?: string) => void;
 
-type Handler = ( event: TargetEvent, targetPath: Path, targetPathNext?: Path ) => any;
+type Handler = (event: TargetEvent, targetPath: Path, targetPathNext?: Path) => any;
 
-type Ignore = ( targetPath: Path ) => boolean;
+type Ignore = (targetPath: Path) => boolean;
 
 type INO = bigint | number;
 
@@ -83,4 +83,4 @@ type WatcherOptions = {
 
 /* EXPORT */
 
-export {Callback, Disposer, Event, FSHandler, FSWatcher, Handler, Ignore, INO, Path, ReaddirMap, Stats, LocksAdd, LocksUnlink, LocksPair, LockConfig, PollerConfig, SubwatcherConfig, WatcherConfig, WatcherOptions, WatcherStats};
+export { Callback, Disposer, Event, FSHandler, FSWatcher, Handler, Ignore, INO, Path, ReaddirMap, Stats, LocksAdd, LocksUnlink, LocksPair, LockConfig, PollerConfig, SubwatcherConfig, WatcherConfig, WatcherOptions, WatcherStats };
